@@ -6,7 +6,7 @@ def hola_mundo(request):
     """
     html_content = """
     <div style='font-family: sans-serif; text-align: center; padding-top: 50px;'>
-        <h1>¡Hola ElisaHG!</h1>
+        <h1>¡Hola PamelaEMC!</h1>
         <p>Esta es mi primera app Django desplegada en PythonAnywhere con Github.</p>
         <p>¡Funcionó!</p>
     </div>
