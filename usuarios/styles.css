@@ -1,0 +1,169 @@
+/* Estilos generales y fondo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1b2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor principal*/
+.auth-container {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 20px;
+    box-shadow: 0 25px 25px rgba(232, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden; /* Para contener las esquinas redondeadas */
+    padding-bottom: 40px; /* Espacio extra al final */
+}
+
+/* Estilos de las pestañas */
+.tabs {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #ecf0f1; /* Línea separadora */
+}
+
+.tab-button {
+    flex-grow: 1; /* Ocupan el mismo espacio */
+    padding: 15px 0;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #95a5a6;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-button.active {
+    color: hwb(312 0% 0%); 
+    border-bottom: 3px solid #ff00dd; 
+}
+
+/* Estilos del contenido del formulario */
+.form-content {
+    padding: 25px 25px 0 25px;
+    display: none; /* Oculta por defecto */
+}
+
+.form-content.active {
+    display: block; /* Muestra el formulario activo */
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+/* Estilos de los grupos de entrada */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #d534db; /* Borde azul al enfocarse */
+    outline: none;
+}
+
+/* Estilos de los botones de enviar */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.login-btn {
+    background-color: #d534db; /* Botón de Login azul */
+}
+
+.login-btn:hover {
+    background-color: #c600ab;
+}
+
+.register-btn {
+    background-color: #d534db; /* Botón de Registro verde */
+}
+
+.register-btn:hover {
+    background-color: #c600ab;
+}
+
+/*Estilos para agrupar los dos botones*/
+.button-group {
+    display: flex; /* Permite que los elementos internos se pongan en línea */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Modificamos los estilos del botón de enviar para que compartan el espacio */
+.submit-btn {
+    /* ... otros estilos ... */
+    width: 100%; /* El 100% que ahora está en el grupo de botones */
+    flex-grow: 1; /* Hace que ambos botones crezcan y ocupen el mismo ancho */
+}
+
+.close-btn {
+    background-color: #d534db;
+    font-weight: 500;
+}
+
+.close-btn:hover {
+    background-color: #c600ab; 
+}
+
+/* Estilo para el enlace de contraseña olvidada */
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #7f8c8d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    color: #3498db;
+}
+
+
+.logo {
+    /* Asegura que el logo se centre */
+    display: block; 
+    margin: 0 auto;
+    /* Define el tamaño (ajusta esto según el tamaño de tu logo) */
+    width: 150px; 
+    height: 80px;  
+    /* Añade espacio debajo del logo para separarlo de los campos de entrada */
+    margin-bottom: 0px; 
+}

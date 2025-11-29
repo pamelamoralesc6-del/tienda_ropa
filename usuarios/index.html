@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio / Registro</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="auth-container">
+        <div id="login-form" class="form-content active">
+            <img src="logo.png" alt="Logo de la Aplicación" class="logo">
+            <h3 style="font-size: 16px; color: #d534db">Ingresa tus datos para acceder a tu cuenta</h3>
+    
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="login-email">Correo Electrónico</label>
+                    <input type="email" id="login-email" name="email" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" name="password" placeholder="**********" required>
+                </div>
+                <button type="submit" class="submit-btn login-btn">Iniciar Sesión</button>
+                <button type="submit" class="submit-btn register-btn" onclick="showForm('register')">Registrarse</button>
+            </form>
+        </div>
+
+        <div id="register-form" class="form-content">
+            <img src="logo.png" alt="Logo de la Aplicación" class="logo">
+            <h3 style="font-size: 18px;"> Crear cuenta</h3>
+            <h3 style="font-size: 16px; color: #d534db">Completa tus datos para registrarte</h3>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="register-name">Nombre</label>
+                    <input type="text" id="register-name" name="name" placeholder="Nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-apellido">Apellido</label>
+                    <input type="text" id="register-apellido" name="apellido" placeholder="Apellido" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-email">Correo Electrónico</label>
+                    <input type="email" id="register-email" name="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Contraseña</label>
+                    <input type="password" id="register-password" name="password" placeholder="Crea una contraseña" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="submit-btn close-btn" onclick="showForm('login')">Cerrar</button>
+                    <button type="submit" class="submit-btn register-btn">Registrarse</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showForm(formId) {
+            // Oculta todos los formularios
+            document.querySelectorAll('.form-content').forEach(form => {
+                form.classList.remove('active');
+            });
+            // Quita el estado activo de todos los botones
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Muestra el formulario seleccionado y activa el botón
+            document.getElementById(formId + '-form').classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
